@@ -34,6 +34,6 @@ export const GlobalStyles = createGlobalStyle`
         font-family: 'Roboto Mono', sans-serif;
     }
     body {
-        
+        background: #1A1A1A;
     }
 `
