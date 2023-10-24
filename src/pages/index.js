@@ -15,6 +15,7 @@ const IndexPage = () => {
             <MyBlogTemplate />
             <ContactTemplate />
             <QuoteTemplate />
+            <div style={{ height: "5000px" }} />
         </Layout>
     )
 }

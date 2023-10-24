@@ -34,6 +34,9 @@ export const GlobalStyles = createGlobalStyle`
         font-family: 'Roboto Mono', sans-serif;
     }
     body {
-        background: #1A1A1A;
+        background: ${(props) => props.theme.bodyBackground};
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
     }
 `
