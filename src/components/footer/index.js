@@ -22,9 +22,26 @@ const Footer = () => {
     const [ref3, inView3] = useInView(animQueueOptions)
     const [ref4, inView4] = useInView(animQueueOptions)
     const [ref5, inView5] = useInView(animQueueOptions)
+    const [ref6, inView6] = useInView(animQueueOptions)
 
     return (
-        <FooterWrapper>
+        <FooterWrapper
+            as={motion.div}
+            ref={ref6}
+            initial={{
+                y: 100,
+                opacity: 0,
+            }}
+            animate={{
+                y: inView6 ? 0 : 100,
+                opacity: inView6 ? 1 : 0,
+            }}
+            transition={{
+                type: "spring",
+                stiffness: 200,
+                damping: 20,
+            }}
+        >
             <FooterBodyWrapper>
                 <Content
                     as={motion.div}
