@@ -187,7 +187,7 @@ export const MobileNav = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 150px;
+    gap: 50px;
     z-index: -1;
 
     @media (min-width: 768px) {
@@ -205,6 +205,7 @@ export const MobileMenuLayout = styled.div`
     display: flex;
     flex-direction: column;
     gap: 40px;
+    margin-top: 55px;
 `
 export const DrawingHills = styled.div`
     background: no-repeat top/cover url(${mobile_menu_background});
