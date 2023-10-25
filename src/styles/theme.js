@@ -1,6 +1,3 @@
-import React from "react"
-import { ThemeProvider } from "styled-components"
-
 export const breakpoint = {
     desktop: 1280,
     laptop: 1124,
@@ -19,8 +16,33 @@ export const theme = {
     media,
 }
 
-const Theme = ({ children }) => {
-    return <ThemeProvider theme={theme}>{children}</ThemeProvider>
+export const lightTheme = {
+    bodyBackground: "#D5D0EE",
+    invertColorMenu: "0",
+    text: "#D5D0EE",
+    borderColor: "#0001",
+    infoBackground: "#131313",
+    logoTextColor: "#131313",
+    navBackground: "#000",
+    navTextColor: "#fff",
+    socialMediaBarBackground: "#D5D0EE",
+    footerBackground: "#D3CCF9",
+    footerText: "#000",
+    socialMediaBarBackgroundFooter: "#B7A8FF",
+    socialMediaBarBackgroundComponent: "#D5D0EE",
 }
-
-export default Theme
+export const darkTheme = {
+    bodyBackground: "#1A1A1A",
+    invertColorMenu: "1",
+    text: "#000",
+    borderColor: "#fff1",
+    infoBackground: "#D5D0EE",
+    logoTextColor: "#fff",
+    navBackground: "#9680ff",
+    navTextColor: "#131313",
+    socialMediaBarBackground: "#9680FF",
+    footerBackground: "#131313",
+    footerText: "#fff",
+    socialMediaBarBackgroundFooter: "#fff",
+    socialMediaBarBackgroundComponent: "#9680FF",
+}
