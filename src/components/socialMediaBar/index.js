@@ -28,9 +28,9 @@ const socialMediaBarData = [
     },
 ]
 
-const SocialMediaBar = () => {
+const SocialMediaBar = (props) => {
     return (
-        <SocialMediaBarWrapper>
+        <SocialMediaBarWrapper isFooter={props.isFooter}>
             {socialMediaBarData.map((item) => {
                 return (
                     <Icon

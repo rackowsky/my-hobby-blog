@@ -20,6 +20,8 @@ import {
     Break,
     MobileMenuLayout,
     DrawingHills,
+    SocialMediaBarWrapper,
+    Icon,
 } from "./index.style"
 
 import aboutMeIcon from "../../utils/imgs/nav/about-me.png"
@@ -27,10 +29,33 @@ import myBlogIcon from "../../utils/imgs/nav/my-blog.png"
 import ContactIcon from "../../utils/imgs/nav/contact.png"
 import ThemeIcon from "../../utils/imgs/nav/theme.png"
 
-import SocialMediaBar from "../socialMediaBar"
-
 import particles_elipse from "../../utils/svgs/particles-elipse.svg"
 import camera_element from "../../utils/imgs/logo.png"
+
+import facebook from "../../utils/svgs/socialMediaBar/facebook_icon.svg"
+import github from "../../utils/svgs/socialMediaBar/github_icon.svg"
+import telegram from "../../utils/svgs/socialMediaBar/telegram_icon.svg"
+
+const socialMediaBarData = [
+    {
+        id: 1,
+        name: "Facebook",
+        link: "#",
+        icon: facebook,
+    },
+    {
+        id: 2,
+        name: "GitHub",
+        link: "https://github.com/rackowsky",
+        icon: github,
+    },
+    {
+        id: 3,
+        name: "Telegram",
+        link: "#",
+        icon: telegram,
+    },
+]
 
 const Navbar = ({ toggleTheme, darkMode }) => {
     const [showMenu, setShowMenu] = useState(false)
@@ -175,11 +200,49 @@ const Navbar = ({ toggleTheme, darkMode }) => {
         return elements
     }
 
+    const animQueueOptions = {
+        triggerOnce: true,
+    }
+    const [ref1, inView1] = useInView(animQueueOptions)
+    const [ref2, inView2] = useInView(animQueueOptions)
+
     return (
         <>
             <GlobalNavbarStyle setShowMenu={showMenu} />
-            <NavbarWrapper>
-                <AlertWrapper>
+            <NavbarWrapper
+                as={motion.div}
+                ref={ref1}
+                initial={{
+                    y: -100,
+                    opacity: 0,
+                }}
+                animate={{
+                    y: inView1 ? 0 : -100,
+                    opacity: inView1 ? 1 : 0,
+                }}
+                transition={{
+                    type: "spring",
+                    stiffness: 200,
+                    damping: 20,
+                }}
+            >
+                <AlertWrapper
+                    as={motion.div}
+                    ref={ref2}
+                    initial={{
+                        x: -100,
+                        opacity: 0,
+                    }}
+                    animate={{
+                        x: inView2 ? 0 : -100,
+                        opacity: inView2 ? 1 : 0,
+                    }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 200,
+                        damping: 20,
+                    }}
+                >
                     <Emoji darkMode={darkMode} />
                     <p>
                         Hey, if you want to receive the{" "}
@@ -375,7 +438,28 @@ const Navbar = ({ toggleTheme, darkMode }) => {
                                 }
                             })}
                         </MobileMenuLayout>
-                        <SocialMediaBar />
+                        <SocialMediaBarWrapper>
+                            {socialMediaBarData.map((item) => {
+                                return (
+                                    <Icon
+                                        key={item.id}
+                                        iconBackground={item.icon}
+                                        href={item.link}
+                                        as={motion.a}
+                                        transition={{
+                                            type: "spring",
+                                            stiffness: 200,
+                                            damping: 20,
+                                        }}
+                                        whileHover={{
+                                            scale: 1.2,
+                                            rotate: 0.9,
+                                        }}
+                                        whileTap={{ scale: 0.975 }}
+                                    />
+                                )
+                            })}
+                        </SocialMediaBarWrapper>
                         {particlesRandomizer()}
                         <DrawingHills />
                     </MobileNav>

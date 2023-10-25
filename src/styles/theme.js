@@ -26,6 +26,10 @@ export const lightTheme = {
     navBackground: "#000",
     navTextColor: "#fff",
     socialMediaBarBackground: "#D5D0EE",
+    footerBackground: "#D3CCF9",
+    footerText: "#000",
+    socialMediaBarBackgroundFooter: "#B7A8FF",
+    socialMediaBarBackgroundComponent: "#D5D0EE",
 }
 export const darkTheme = {
     bodyBackground: "#1A1A1A",
@@ -37,4 +41,8 @@ export const darkTheme = {
     navBackground: "#9680ff",
     navTextColor: "#131313",
     socialMediaBarBackground: "#9680FF",
+    footerBackground: "#131313",
+    footerText: "#fff",
+    socialMediaBarBackgroundFooter: "#fff",
+    socialMediaBarBackgroundComponent: "#9680FF",
 }

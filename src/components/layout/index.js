@@ -56,7 +56,10 @@ const Layout = (props) => {
                         content="My Hobby Blog - A Photography Website"
                     />
                     <title>My Hobby Blog - A Photography Website</title>
-                    <link rel="canonical" href="https://sk-design.com.pl/" />
+                    <link
+                        rel="canonical"
+                        href="https://my-hobby-blog.netlify.app/"
+                    />
                     <link rel="icon" type="image/x-icon" href={favicon} />
                 </Helmet>
                 <Navbar toggleTheme={toggleTheme} darkMode={darkMode} />
