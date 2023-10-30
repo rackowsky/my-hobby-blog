@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import styled from "styled-components"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 import {
     GlobalNavbarStyle,
@@ -110,19 +111,19 @@ const Navbar = ({ toggleTheme, darkMode }) => {
             id: 1,
             icon: aboutMeIcon,
             name: "about me",
-            link: "/about-me",
+            link: "about_me",
         },
         {
             id: 2,
             icon: myBlogIcon,
             name: "my blog",
-            link: "/my-blog",
+            link: "my_blog",
         },
         {
             id: 3,
             icon: ContactIcon,
             name: "contact",
-            link: "/contact",
+            link: "contact",
         },
         {
             id: 4,
@@ -300,7 +301,12 @@ const Navbar = ({ toggleTheme, darkMode }) => {
                                             onAnimationComplete_Nav
                                         }
                                     >
-                                        <NavButton id={item.id} to={item.link}>
+                                        <NavButton
+                                            id={item.id}
+                                            onClick={() =>
+                                                scrollTo("#" + item.link)
+                                            }
+                                        >
                                             <NavIcon
                                                 icon={item.icon}
                                                 id={item.id}
@@ -400,7 +406,9 @@ const Navbar = ({ toggleTheme, darkMode }) => {
                                         >
                                             <NavButton
                                                 id={item.id}
-                                                to={item.link}
+                                                onClick={() =>
+                                                    scrollTo("#" + item.link)
+                                                }
                                             >
                                                 <NavIcon
                                                     icon={item.icon}
