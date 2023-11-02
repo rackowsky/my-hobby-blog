@@ -47,7 +47,6 @@ const HeroTemplate = () => {
                     damping: 20,
                 }}
             >
-                {/* Inside try to make floating particles like a background (position absolute in relative environment) with normal `h1` text and under text `p` for description */}
                 <h1>my hobby blog</h1>
                 <p>
                     my personal blog about <span>photography</span>

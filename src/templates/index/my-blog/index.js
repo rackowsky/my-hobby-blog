@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
+import { breakpoint } from "../../../styles/theme"
 
 import {
     MyBlogTemplateWrapper,
@@ -72,6 +73,25 @@ const MyBlogTemplate = () => {
     const [ref1, inView1] = useInView(animQueueOptions)
     const [ref2, inView2] = useInView(animQueueOptions)
 
+    const [itemsAmount, setItemsAmount] = useState(6)
+    function handleResize() {
+        const ViewportWidth = window.innerWidth
+        const tabletWidth = breakpoint.tablet
+
+        if (ViewportWidth <= tabletWidth) {
+            setItemsAmount(3)
+        } else {
+            setItemsAmount(6)
+        }
+    }
+    useEffect(() => {
+        handleResize()
+        window.addEventListener("resize", handleResize)
+        return () => {
+            window.removeEventListener("resize", handleResize)
+        }
+    }, [])
+
     return (
         <>
             <div
@@ -104,7 +124,7 @@ const MyBlogTemplate = () => {
                     description="latest articles..."
                 />
                 <ContentWrapper>
-                    {blogData.map((item) => {
+                    {blogData.slice(0, itemsAmount).map((item) => {
                         return (
                             <ItemWrapper
                                 as={motion.div}
@@ -125,8 +145,8 @@ const MyBlogTemplate = () => {
                                         <h1>{item.title}</h1>
                                     </div>
                                     <h2>{item.description}</h2>
+                                    <Thumbnail urlThumb={item.thumbnail} />
                                 </ContentItemWrapper>
-                                <Thumbnail urlThumb={item.thumbnail} />
                             </ItemWrapper>
                         )
                     })}

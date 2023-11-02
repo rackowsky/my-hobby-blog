@@ -8,7 +8,7 @@ import bodyBackground from "../../../utils/imgs/bodyBg/contact.png"
 export const ContactTemplateWrapper = styled.div`
     background: no-repeat center/cover url(${bodyBackground}) #8e77ff;
     margin-top: ${ViewportCalculator(25, "desktop")};
-    margin-bottom: ${ViewportCalculator(25, "desktop")};
+    margin-bottom: ${ViewportCalculator(50, "desktop")};
     margin-left: ${ViewportCalculator(100, "desktop")};
     margin-right: ${ViewportCalculator(100, "desktop")};
     padding: ${ViewportCalculator(15, "desktop")};
@@ -16,7 +16,7 @@ export const ContactTemplateWrapper = styled.div`
     box-shadow: 0px 3px 85px ${(props) => props.theme.bodyShadowColor};
 
     @media ${theme.media.desktop} {
-        margin: 25px 100px;
+        margin: 50px 100px;
         border-radius: 45px;
         padding: 15px;
     }

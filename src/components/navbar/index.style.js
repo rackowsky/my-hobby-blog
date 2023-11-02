@@ -134,6 +134,7 @@ export const NavButton = styled.div`
     gap: 10px;
     text-decoration: none;
     color: ${(props) => props.theme.navTextColor};
+    cursor: pointer;
 
     @media ${theme.media.tablet} {
         font-size: 20px;

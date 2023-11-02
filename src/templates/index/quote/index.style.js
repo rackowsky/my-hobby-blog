@@ -8,7 +8,7 @@ import bodyBackground from "../../../utils/imgs/bodyBg/quote.png"
 export const QuoteTemplateWrapper = styled.div`
     background: no-repeat center/cover url(${bodyBackground}) #8e77ff;
     margin-top: ${ViewportCalculator(25, "desktop")};
-    margin-bottom: ${ViewportCalculator(25, "desktop")};
+    margin-bottom: ${ViewportCalculator(50, "desktop")};
     margin-left: ${ViewportCalculator(100, "desktop")};
     margin-right: ${ViewportCalculator(100, "desktop")};
     padding: ${ViewportCalculator(15, "desktop")};
@@ -17,7 +17,7 @@ export const QuoteTemplateWrapper = styled.div`
     min-height: 780px;
 
     @media ${theme.media.desktop} {
-        margin: 25px 100px;
+        margin: 50px 100px;
         border-radius: 45px;
         padding: 15px;
     }

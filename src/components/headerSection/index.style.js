@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { theme } from "../../styles/theme"
 
 export const HeaderSectionWrapper = styled.div`
     width: fit-content;
@@ -18,6 +19,10 @@ export const HeaderSectionWrapper = styled.div`
         rgba(255, 255, 255, 0) 50%
     );
     border-width: 2px;
+
+    @media ${theme.media.tablet} {
+        margin: 20px;
+    }
 
     > h1 {
         color: #cec4ff;
