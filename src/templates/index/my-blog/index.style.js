@@ -51,36 +51,21 @@ export const ContentWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-    padding: 25px 250px;
+    padding: 25px 0;
     z-index: 50;
+    justify-content: center;
 
     @media ${theme.media.desktop} {
-        padding: 25px 250px;
+        padding: 0 10px;
     }
     @media ${theme.media.laptop} {
-        padding-top: ${ViewportCalculator(25, "laptop")};
-        padding-bottom: ${ViewportCalculator(25, "laptop")};
-        padding-left: ${ViewportCalculator(250, "laptop")};
-        padding-right: ${ViewportCalculator(250, "laptop")};
+        gap: 15px;
     }
     @media ${theme.media.tablet} {
-        padding-top: ${ViewportCalculator(25, "tablet")};
-        padding-bottom: ${ViewportCalculator(25, "tablet")};
-        padding-left: ${ViewportCalculator(250, "tablet")};
-        padding-right: ${ViewportCalculator(250, "tablet")};
-        padding: 0;
     }
     @media ${theme.media.largeMobile} {
-        padding-top: ${ViewportCalculator(25, "largeMobile")};
-        padding-bottom: ${ViewportCalculator(25, "largeMobile")};
-        padding-left: ${ViewportCalculator(250, "largeMobile")};
-        padding-right: ${ViewportCalculator(250, "largeMobile")};
     }
     @media ${theme.media.mobile} {
-        padding-top: ${ViewportCalculator(25, "mobile")};
-        padding-bottom: ${ViewportCalculator(25, "mobile")};
-        padding-left: ${ViewportCalculator(250, "mobile")};
-        padding-right: ${ViewportCalculator(250, "mobile")};
     }
 `
 export const Button = styled.div`
@@ -97,13 +82,17 @@ export const Button = styled.div`
     margin-bottom: 60px;
 `
 export const ItemWrapper = styled.div`
-    width: calc(50% - 25px);
+    width: 425px;
     background: #efecff;
     border-top-right-radius: 30px;
     border-left: 8px solid #9680ff;
     z-index: 50;
     cursor: pointer;
 
+    @media ${theme.media.laptop} {
+        width: ${ViewportCalculator(475, "laptop")};
+        min-height: auto;
+    }
     @media ${theme.media.tablet} {
         width: 100%;
         min-height: auto;
@@ -113,6 +102,8 @@ export const ContentItemWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
+    height: 100%;
+    justify-content: space-between;
 
     > div {
         display: flex;
