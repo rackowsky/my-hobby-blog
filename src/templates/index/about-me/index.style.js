@@ -10,7 +10,7 @@ export const AboutMeTemplateWrapper = styled.div`
     position: relative;
     background: no-repeat center/cover url(${bodyBackground}) #8e77ff;
     margin-top: ${ViewportCalculator(25, "desktop")};
-    margin-bottom: ${ViewportCalculator(50, "desktop")};
+    margin-bottom: ${ViewportCalculator(70, "desktop")};
     margin-left: ${ViewportCalculator(100, "desktop")};
     margin-right: ${ViewportCalculator(100, "desktop")};
     padding: ${ViewportCalculator(15, "desktop")};
@@ -24,7 +24,7 @@ export const AboutMeTemplateWrapper = styled.div`
     }
     @media ${theme.media.laptop} {
         margin-top: ${ViewportCalculator(25, "laptop")};
-        margin-bottom: ${ViewportCalculator(25, "laptop")};
+        margin-bottom: ${ViewportCalculator(70, "laptop")};
         margin-left: ${ViewportCalculator(50, "laptop")};
         margin-right: ${ViewportCalculator(50, "laptop")};
         border-radius: ${ViewportCalculator(45, "laptop")};
@@ -40,11 +40,11 @@ export const AboutMeTemplateWrapper = styled.div`
     }
     @media ${theme.media.largeMobile} {
         margin-top: ${ViewportCalculator(25, "largeMobile")};
-        margin-bottom: ${ViewportCalculator(25, "largeMobile")};
+        margin-bottom: ${ViewportCalculator(50, "largeMobile")};
     }
     @media ${theme.media.mobile} {
         margin-top: ${ViewportCalculator(25, "mobile")};
-        margin-bottom: ${ViewportCalculator(25, "mobile")};
+        margin-bottom: ${ViewportCalculator(50, "mobile")};
     }
 `
 export const ContentWrapper = styled.div`
@@ -64,12 +64,8 @@ export const ContentWrapper = styled.div`
         padding: 0;
     }
     @media ${theme.media.largeMobile} {
-        padding-top: ${ViewportCalculator(40, "largeMobile")};
-        padding-bottom: ${ViewportCalculator(100, "largeMobile")};
     }
     @media ${theme.media.mobile} {
-        padding-top: ${ViewportCalculator(40, "mobile")};
-        padding-bottom: ${ViewportCalculator(100, "mobile")};
     }
 `
 export const P = styled.p`
@@ -87,7 +83,7 @@ export const P = styled.p`
     margin-bottom: 0;
     margin-left: ${(props) =>
         props.isSecondParagraph
-            ? ViewportCalculator(700, "desktop")
+            ? ViewportCalculator(250, "desktop")
             : ViewportCalculator(200, "desktop")};
     margin-right: ${(props) =>
         props.isSecondParagraph
@@ -117,7 +113,7 @@ export const P = styled.p`
     @media ${theme.media.desktop} {
         margin: ${(props) =>
             props.isSecondParagraph
-                ? "-45px 125px 0 700px"
+                ? "-45px 125px 0 250px"
                 : "0 200px 0 200px"};
         padding: ${(props) =>
             props.isSecondParagraph
@@ -126,9 +122,10 @@ export const P = styled.p`
         font-size: 20px;
     }
     @media ${theme.media.laptop} {
+        font-size: ${ViewportCalculator(20, "laptop")};
         margin-left: ${(props) =>
             props.isSecondParagraph
-                ? ViewportCalculator(700, "laptop")
+                ? ViewportCalculator(250, "laptop")
                 : ViewportCalculator(200, "laptop")};
         margin-right: ${(props) =>
             props.isSecondParagraph
@@ -155,74 +152,34 @@ export const P = styled.p`
         border-radius: 0;
         margin: 20px 0;
         padding: 10px;
-        font-size: ${ViewportCalculator(20, "desktop")};
+        font-size: ${ViewportCalculator(20, "tablet")};
     }
     @media ${theme.media.largeMobile} {
-        margin-left: ${(props) =>
-            props.isSecondParagraph
-                ? ViewportCalculator(700, "largeMobile")
-                : ViewportCalculator(200, "largeMobile")};
-        margin-right: ${(props) =>
-            props.isSecondParagraph
-                ? ViewportCalculator(125, "largeMobile")
-                : ViewportCalculator(200, "largeMobile")};
-        padding-top: ${(props) =>
-            props.isSecondParagraph
-                ? ViewportCalculator(35, "largeMobile")
-                : ViewportCalculator(45, "largeMobile")};
-        padding-bottom: ${(props) =>
-            props.isSecondParagraph
-                ? ViewportCalculator(35, "largeMobile")
-                : ViewportCalculator(75, "largeMobile")};
-        padding-left: ${(props) =>
-            props.isSecondParagraph
-                ? ViewportCalculator(35, "largeMobile")
-                : ViewportCalculator(60, "largeMobile")};
-        padding-right: ${(props) =>
-            props.isSecondParagraph
-                ? ViewportCalculator(20, "largeMobile")
-                : ViewportCalculator(250, "largeMobile")};
-        font-size: ${ViewportCalculator(20, "desktop")};
     }
     @media ${theme.media.mobile} {
-        margin-left: ${(props) =>
-            props.isSecondParagraph
-                ? ViewportCalculator(700, "mobile")
-                : ViewportCalculator(200, "mobile")};
-        margin-right: ${(props) =>
-            props.isSecondParagraph
-                ? ViewportCalculator(125, "mobile")
-                : ViewportCalculator(200, "mobile")};
-        padding-top: ${(props) =>
-            props.isSecondParagraph
-                ? ViewportCalculator(35, "mobile")
-                : ViewportCalculator(45, "mobile")};
-        padding-bottom: ${(props) =>
-            props.isSecondParagraph
-                ? ViewportCalculator(35, "mobile")
-                : ViewportCalculator(75, "mobile")};
-        padding-left: ${(props) =>
-            props.isSecondParagraph
-                ? ViewportCalculator(35, "mobile")
-                : ViewportCalculator(60, "mobile")};
-        padding-right: ${(props) =>
-            props.isSecondParagraph
-                ? ViewportCalculator(20, "mobile")
-                : ViewportCalculator(250, "mobile")};
-        font-size: ${ViewportCalculator(20, "desktop")};
     }
 
     &::after {
         display: ${(props) => (props.isSecondParagraph ? "none" : "block")};
         content: "";
-        height: 335px;
+        height: ${ViewportCalculator(335, "desktop")};
         aspect-ratio: 1/1;
         background: no-repeat center/100% url(${SmileEmoji});
         position: absolute;
-        right: -75px;
-        top: -25px;
+        right: -${ViewportCalculator(75, "desktop")};
+        top: -${ViewportCalculator(25, "desktop")};
         filter: grayscale(${(props) => props.theme.invertColorMenu});
 
+        @media ${theme.media.desktop} {
+            height: 335px;
+            right: -75px;
+            top: -25px;
+        }
+        @media ${theme.media.laptop} {
+            height: ${ViewportCalculator(335, "laptop")};
+            right: -${ViewportCalculator(75, "laptop")};
+            top: -${ViewportCalculator(25, "laptop")};
+        }
         @media ${theme.media.tablet} {
             display: none;
         }

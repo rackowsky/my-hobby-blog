@@ -12,9 +12,9 @@ const IndexPage = () => {
         <Layout>
             <HeroTemplate />
             <AboutMeTemplate />
-            <MyBlogTemplate />
+            {/* <MyBlogTemplate />
             <ContactTemplate />
-            <QuoteTemplate />
+            <QuoteTemplate /> */}
         </Layout>
     )
 }

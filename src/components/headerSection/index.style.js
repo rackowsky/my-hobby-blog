@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { theme } from "../../styles/theme"
+import ViewportCalculator from "../../styles/viewportCalculator"
 
 export const HeaderSectionWrapper = styled.div`
     width: fit-content;
@@ -26,11 +27,48 @@ export const HeaderSectionWrapper = styled.div`
 
     > h1 {
         color: #cec4ff;
-        font-size: 50px;
+        font-size: ${ViewportCalculator(50, "desktop")};
+
+        @media ${theme.media.desktop} {
+            font-size: 50px;
+        }
+        @media ${theme.media.laptop} {
+            font-size: ${ViewportCalculator(50, "laptop")};
+        }
+        @media ${theme.media.tablet} {
+            font-size: ${ViewportCalculator(50, "tablet")};
+        }
+        @media ${theme.media.largeMobile} {
+            font-size: ${ViewportCalculator(50, "largeMobile")};
+        }
+        @media ${theme.media.mobile} {
+            font-size: ${ViewportCalculator(50, "mobile")};
+        }
     }
     > p {
         color: #cec4ff;
-        font-size: 18px;
-        margin-left: 20px;
+        font-size: ${ViewportCalculator(18, "desktop")};
+        margin-left: ${ViewportCalculator(20, "desktop")};
+
+        @media ${theme.media.desktop} {
+            font-size: 18px;
+            margin-left: 20px;
+        }
+        @media ${theme.media.laptop} {
+            font-size: ${ViewportCalculator(18, "laptop")};
+            margin-left: ${ViewportCalculator(20, "laptop")};
+        }
+        @media ${theme.media.tablet} {
+            font-size: ${ViewportCalculator(18, "tablet")};
+            margin-left: ${ViewportCalculator(20, "tablet")};
+        }
+        @media ${theme.media.largeMobile} {
+            font-size: ${ViewportCalculator(18, "largeMobile")};
+            margin-left: ${ViewportCalculator(20, "largeMobile")};
+        }
+        @media ${theme.media.mobile} {
+            font-size: ${ViewportCalculator(18, "mobile")};
+            margin-left: ${ViewportCalculator(20, "mobile")};
+        }
     }
 `
