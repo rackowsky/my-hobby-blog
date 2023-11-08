@@ -30,6 +30,9 @@ export const lightTheme = {
     footerText: "#000",
     socialMediaBarBackgroundFooter: "#B7A8FF",
     socialMediaBarBackgroundComponent: "#D5D0EE",
+    bodyShadowColor: "rgba(19, 19, 19, 0.24)",
+    aboutMeBackgroundColor: "#D5D0EE",
+    aboutMeTextColor: "#131313",
 }
 export const darkTheme = {
     bodyBackground: "#1A1A1A",
@@ -45,4 +48,7 @@ export const darkTheme = {
     footerText: "#fff",
     socialMediaBarBackgroundFooter: "#fff",
     socialMediaBarBackgroundComponent: "#9680FF",
+    bodyShadowColor: "rgba(150, 128, 255, 0.36)",
+    aboutMeBackgroundColor: "#131313",
+    aboutMeTextColor: "#9680FF",
 }

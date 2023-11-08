@@ -6,7 +6,9 @@ import ViewportCalculator from "../../styles/viewportCalculator"
 import logo from "../../utils/imgs/logo.png"
 import footer_background from "../../utils/imgs/footer/footer-bg.png"
 
-export const FooterWrapper = styled.div``
+export const FooterWrapper = styled.div`
+    overflow: hidden;
+`
 export const StripWrapper = styled.div`
     min-height: ${ViewportCalculator(87, "desktop")};
     background: #9680ff;

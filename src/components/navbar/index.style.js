@@ -124,7 +124,7 @@ export const Nav = styled.div`
         display: none;
     }
 `
-export const NavButton = styled(Link)`
+export const NavButton = styled.div`
     font-weight: 600;
     background: ${(props) => props.theme.navBackground};
     border-radius: 10px;
@@ -134,6 +134,7 @@ export const NavButton = styled(Link)`
     gap: 10px;
     text-decoration: none;
     color: ${(props) => props.theme.navTextColor};
+    cursor: pointer;
 
     @media ${theme.media.tablet} {
         font-size: 20px;
