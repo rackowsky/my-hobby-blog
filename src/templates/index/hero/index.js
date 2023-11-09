@@ -34,11 +34,11 @@ const HeroTemplate = () => {
                 as={motion.div}
                 ref={ref2}
                 initial={{
-                    x: 100,
+                    y: 100,
                     opacity: 0,
                 }}
                 animate={{
-                    x: inView2 ? 0 : 100,
+                    y: inView2 ? 0 : 100,
                     opacity: inView2 ? 1 : 0,
                 }}
                 transition={{

@@ -2,8 +2,17 @@ import React from "react"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 
-import { ContactTemplateWrapper } from "./index.style"
+import {
+    ContactTemplateWrapper,
+    ContactContentWrapper,
+    InfoWrapper,
+    HandPointer,
+    Placing,
+} from "./index.style"
+
 import HeaderSection from "../../../components/headerSection"
+import ContactForm from "../../../components/contactForm"
+import SocialMediaBar from "../../../components/socialMediaBar"
 
 const ContactTemplate = () => {
     const animQueueOptions = {
@@ -43,6 +52,20 @@ const ContactTemplate = () => {
                     title="Contact"
                     description="let's be in touch..."
                 />
+                <ContactContentWrapper>
+                    <ContactForm />
+                    <InfoWrapper>
+                        <HandPointer />
+                        <p>
+                            <span id="isWithoutUnerline">//</span>if you want
+                            contact with me just use <span>contact form</span>{" "}
+                            below or found me on <span>social media</span>
+                        </p>
+                        <Placing>
+                            <SocialMediaBar />
+                        </Placing>
+                    </InfoWrapper>
+                </ContactContentWrapper>
             </ContactTemplateWrapper>
         </>
     )
