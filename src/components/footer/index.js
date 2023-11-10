@@ -66,12 +66,12 @@ const Footer = () => {
                             <h4>my&nbsp;hobby&nbsp;blog</h4>
                         </LogoWrapper>
                         <p>
-                            Morbi ullamcorper nunc in tortor dignissim, eu
-                            mollis diam scelerisque. Mauris laoreet laoreet
-                            lorem sit amet lobortis. Aenean hendrerit quam eget
-                            lacinia venenatis. Fusce maximus velit vitae laoreet
-                            venenatis. In ac nisl a turpis elementum euismod.
-                            Vestibulum vel odio mi.
+                            Through the lens, I explore a world of visual
+                            poetry, capturing moments where time stands still.
+                            Photography, for me, is an intimate conversation
+                            with light, emotions, and the profound beauty that
+                            surrounds us. Join me on a journey of storytelling,
+                            where every click narrates a tale etched in pixels.
                         </p>
                     </div>
                     <SocialMediaBar isFooter />

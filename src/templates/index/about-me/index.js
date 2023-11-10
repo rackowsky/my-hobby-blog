@@ -46,18 +46,18 @@ const AboutMeTemplate = () => {
                 />
                 <ContentWrapper>
                     <P>
-                        Morbi ullamcorper nunc in tortor dignissim, eu mollis
-                        diam scelerisque. Mauris laoreet laoreet lorem sit amet
-                        lobortis. Aenean hendrerit quam eget lacinia venenatis.
-                        Fusce maximus velit vitae laoreet venenatis. In ac nisl
-                        a turpis elementum euismod. Vestibulum vel odio mi.
+                        Embarking on a visual odyssey, my photography hobby is
+                        more than a pastime - it's a narrative crafted through
+                        the lens. In the dance of light and shadow, I strive to
+                        encapsulate the essence of moments, translating them
+                        into timeless stories.
                     </P>
                     <P isSecondParagraph>
-                        Morbi ullamcorper nunc in tortor dignissim, eu mollis
-                        diam scelerisque. Mauris laoreet laoreet lorem sit amet
-                        lobortis. Aenean hendrerit quam eget lacinia venenatis.
-                        Fusce maximus velit vitae laoreet venenatis. In ac nisl
-                        a turpis elementum euismod. Vestibulum vel odio mi.
+                        Whether it's the warmth of a golden hour sunset or the
+                        quiet intimacy of a candid glance, each frame is a
+                        canvas for emotion. Join me as I explore the tapestry of
+                        life, where every click is a brushstroke painting a
+                        vivid portrait of the world around us.
                     </P>
                 </ContentWrapper>
             </AboutMeTemplateWrapper>
