@@ -8,7 +8,7 @@ import bodyBackground from "../../../utils/imgs/bodyBg/my-blog.png"
 export const MyBlogTemplateWrapper = styled.div`
     background: no-repeat center/cover url(${bodyBackground}) #8e77ff;
     margin-top: ${ViewportCalculator(25, "desktop")};
-    margin-bottom: ${ViewportCalculator(70, "desktop")};
+    margin-bottom: ${ViewportCalculator(50, "desktop")};
     margin-left: ${ViewportCalculator(100, "desktop")};
     margin-right: ${ViewportCalculator(100, "desktop")};
     padding: ${ViewportCalculator(15, "desktop")};
@@ -22,7 +22,7 @@ export const MyBlogTemplateWrapper = styled.div`
     }
     @media ${theme.media.laptop} {
         margin-top: ${ViewportCalculator(25, "laptop")};
-        margin-bottom: ${ViewportCalculator(70, "laptop")};
+        margin-bottom: ${ViewportCalculator(50, "laptop")};
         margin-left: ${ViewportCalculator(50, "laptop")};
         margin-right: ${ViewportCalculator(50, "laptop")};
         border-radius: ${ViewportCalculator(45, "laptop")};
@@ -78,8 +78,29 @@ export const Button = styled.div`
     padding: 16px 29px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 60px;
+    margin-top: ${ViewportCalculator(50, "desktop")};
+    margin-bottom: ${ViewportCalculator(60, "desktop")};
+
+    @media ${theme.media.desktop} {
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+    @media ${theme.media.laptop} {
+        margin-top: ${ViewportCalculator(50, "laptop")};
+        margin-bottom: ${ViewportCalculator(50, "laptop")};
+    }
+    @media ${theme.media.tablet} {
+        margin-top: ${ViewportCalculator(50, "tablet")};
+        margin-bottom: ${ViewportCalculator(40, "tablet")};
+    }
+    @media ${theme.media.largeMobile} {
+        margin-top: ${ViewportCalculator(50, "largeMobile")};
+        margin-bottom: ${ViewportCalculator(40, "largeMobile")};
+    }
+    @media ${theme.media.mobile} {
+        margin-top: ${ViewportCalculator(50, "mobile")};
+        margin-bottom: ${ViewportCalculator(40, "mobile")};
+    }
 `
 export const ItemWrapper = styled.div`
     width: 425px;
