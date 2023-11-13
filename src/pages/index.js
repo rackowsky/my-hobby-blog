@@ -14,7 +14,7 @@ const IndexPage = () => {
             <AboutMeTemplate />
             <MyBlogTemplate />
             <ContactTemplate />
-            {/* <QuoteTemplate /> */}
+            <QuoteTemplate />
         </Layout>
     )
 }
