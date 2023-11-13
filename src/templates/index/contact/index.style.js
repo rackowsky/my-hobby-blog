@@ -59,6 +59,7 @@ export const ContactContentWrapper = styled.div`
     @media ${theme.media.desktop} {
         padding: 75px 0 50px 0;
         gap: 70px;
+        margin: 75px 0 50px 0;
     }
     @media ${theme.media.laptop} {
         flex-direction: column-reverse;
