@@ -9,9 +9,12 @@ module.exports = {
     plugins: [
         "gatsby-plugin-styled-components",
         {
-            resolve: "gatsby-plugin-google-analytics",
+            resolve: `gatsby-plugin-google-gtag`,
             options: {
-                trackingId: "G-X2VLH2YJCZ",
+                trackingIds: ["G-X2VLH2YJCZ"],
+                pluginConfig: {
+                    head: true,
+                },
             },
         },
         "gatsby-plugin-image",
