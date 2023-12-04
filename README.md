@@ -1,17 +1,16 @@
-# 📌 [Project Title]
-## 🪜 [Category]
-#### ⚙️ [Description]
+# 📌 My Hobby Blog
+### `🛬 Landing pages`
+#### A simple landing page with a contact form and a mini blog on the topic of photography. 📷
 ### About
-Date: [Date]
-Scope of activities: [Scope of activities],
-Software used: [Software used],
-Technology used: [Technology used],
-Commercial: [Commercial],
+**Date:** `December 2021`\
+**Scope of activities:** `UI/UX Design`, `Mockup`, `Development`\
+**Software used:** `Visual Studio Code`, `Adobe XD`\
+**Technology used:** `React`, `Gatsby`, `JavaScript`\
+**Commercial:** `Non-Commercial`
 
 ### External links
-Behance: [Behance link],
-Dribbble: [Dribbble link],
-Github: [Github link],
-URL: [URL link],
-LinkedIn: [LinkedIn link],
-Instagram: [Instagram link],
+**[Behance](https://behance.net/)**\
+**[Dribbble](https://dribbble.com/)**\
+**[URL](https://example.com/)**\
+**[LinkedIn](https://linkedin.com/)**\
+**[Instagram](https://www.instagram.com/)**
