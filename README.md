@@ -1,3 +1,4 @@
+![The project's banner.](https:example.com/)
 # 📌 My Hobby Blog
 ### `🛬 Landing pages`
 #### A simple landing page with a contact form and a mini blog on the topic of photography. 📷
