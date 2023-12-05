@@ -10,8 +10,9 @@
 **Commercial:** `Non-Commercial`
 
 ### 🔗 External links
-**[Behance](https://behance.net/)**\
-**[Dribbble](https://dribbble.com/)**\
-**[URL](https://example.com/)**\
-**[LinkedIn](https://linkedin.com/)**\
-**[Instagram](https://www.instagram.com/)**
+**[Project on Behance](https://behance.net/)**\
+**[Project on Dribbble](https://dribbble.com/)**\
+**[Project's Website](https://example.com/)**\
+**[My LinkedIn](https://linkedin.com/)**\
+**[My Instagram](https://www.instagram.com/)**
+**[Article on my own website](https://www.example.com/)**
