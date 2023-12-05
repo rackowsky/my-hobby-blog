@@ -9,7 +9,7 @@
 **Technology used:** `React`, `Gatsby`, `JavaScript`\
 **Commercial:** `Non-Commercial`
 
-### External links
+### 🔗 External links
 **[Behance](https://behance.net/)**\
 **[Dribbble](https://dribbble.com/)**\
 **[URL](https://example.com/)**\
