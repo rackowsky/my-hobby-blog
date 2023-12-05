@@ -14,5 +14,5 @@
 **[Project on Dribbble](https://dribbble.com/)**\
 **[Project's Website](https://example.com/)**\
 **[My LinkedIn](https://linkedin.com/)**\
-**[My Instagram](https://www.instagram.com/)**
+**[My Instagram](https://www.instagram.com/)**\
 **[Article on my own website](https://www.example.com/)**
